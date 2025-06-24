@@ -1,0 +1,25 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Aboutpage from "./pages/AboutPage";
+import CoursesPage from "./pages/CoursesePage";
+import ContactPage from "./pages/ContactPage";
+import "./styles/Pages.css";
+import AdmissionPage from "./pages/AdmissionPage";
+
+const App = () => {
+  return(
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/home" element={<HomePage/>}/>
+          <Route path="/about" element={<Aboutpage/>}/>
+          <Route path="/courses" element={<CoursesPage/>}/>
+          <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/ApplyNow" element={<AdmissionPage/>}/>
+        </Routes>
+      </Router>
+
+    </div>
+  )
+}
+export default App;
