@@ -1,4 +1,6 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/HEADER/Header";
+
 
 const AboutPage = () => {
     return(
@@ -25,6 +27,7 @@ const AboutPage = () => {
                 <p>Founded by Dr.Bapuji Salunkhe, Vivekanand College has a rich history of academic achievements and community service. Over the years, we have expanded our programs, facilities, and outreach initiatives to better serve our students and the community.</p>                   
                 </div>
             </div>
+            <Footer/>    
         </div>
     )
 }

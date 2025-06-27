@@ -14,14 +14,21 @@
 .clg-name {
     font-size: 1.8em;
     font-weight: 700;
+    font-size: 1.5em;
+}
+.clg-name a {
     color: #fff;
+    text-decoration: none;
+    transition: color .3s ease ;
+}
+.clg-name a:hover {
+    color: #f0f0f0;
 }
 
 .desktop-nav {
     display: flex;
     gap: 25px;
     align-items: center;
-    color: #fff;
 }
 
 .nav-item {
@@ -32,12 +39,9 @@
     transition: color .3s ease, border-bottom .3s ease;
 }
 
-.nav-item-1 {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 0;
-    transition: color .3s ease, border-bottom .3s ease;
+.nav-item:hover {
+    color: #f0f0f0;
+    border-bottom: 2px solid #fff;
 }
 
 .btn.pm-btn {
@@ -47,8 +51,31 @@
     border-radius: 5px;
     text-decoration: none;
     transition: background-color .3s ease;
-    font-weight: 700;
+    font-weight: bold;
 }
+.btn.pm-btn:hover {
+    background-color: #218838;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 1002;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
 .drawer-nav {
   display: none;
   position: fixed;
@@ -64,34 +91,59 @@
 .drawer-nav.open {
   display: flex;
 }
+
+.drawer-nav .nav-item {
+  color: #343a40;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.drawer-nav.nav-item:hover {
+  background-color: #f8f9fa;
+  color: #007bff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.drawer-nav .nav-item.btn.pm-btn {
+  text-align: center;
+}
+
 .close-drawer-btn {
+  position:absolute;
+  top: 15px;
+  right: 15px;
   background: none;
   border: none;
   font-size: 2em;
-  align-self: flex-end;
+  color: #343a40;
   cursor: pointer;
+  z-index: 1010;
 }
 
-.hamburger-menu {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1001;
-}
-
-.hamburger-icon {
+.drawer-nav.open+.drawer-overlay {
   display: block;
-  width: 30px;
-  height: 4px;
-  background: #333;
-  margin: 5px 0;
-  border-radius: 2px;
 }
 
-@media (max-width: 900px) {
+.drawer-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.2);
+  z-index: 1999;
+}
+
+@media (max-width: 768px) {
   .hamburger-menu {
     display: block;
   }
+  .desktop-nav {
+    display: none;
+  }
+}
+
+.header {
+  justify-content: space-between;
 }

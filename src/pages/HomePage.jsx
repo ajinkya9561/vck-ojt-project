@@ -1,9 +1,12 @@
+
+import { Link } from "react-router-dom";
 import Header from "../components/HEADER/Header";
+import Footer from "../components/Footer/Footer";
 
 const HomePage = () => {
-    return(
-        <div>
-            <Header/>
+    return (
+        <div className="main-layout">
+            <Header />
             <div className="content">
                 <div className="page-container" style={{overflow: "auto"}}>
                     <div className="hero-section">
@@ -14,7 +17,8 @@ const HomePage = () => {
                             
                             <p>Your journey to Excellence starts here</p>
                             
-                            <a className="btn hero-btn" href="/ApplyNow">Apply Now!</a>
+                            <Link to="/ApplyNow" className="btn hero-btn" >Apply Now!</Link>
+                            {""}
                         </div>
                     </div>
                     
@@ -38,20 +42,16 @@ const HomePage = () => {
                 
                     <div className="call-to-action">
                         <p>Ready to Explore Our Courses?</p>
-                        <a className="btn" href="/courses">Explore Courses!</a>
+                        <Link to="/courses" className="btn" >Explore Courses!</Link>
+                    {""}
                     </div>
                 
                 </div>
 
-                <div className="chatbot-container">
-                    <button className="chatbot-open-button">
-                        <img alt="chat icon" src="/images/operator.png" style={{width: "100px" , height:"auto"}}></img>
-                    </button>
-                    <div className="chat-window-closed"></div>
-                </div>
+                
             </div>
+            <Footer/>
         </div>
     )
 }
 export default HomePage;
-

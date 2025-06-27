@@ -1,4 +1,6 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/HEADER/Header";
+
 
 const CoursesePage = () => {
     return(
@@ -98,6 +100,7 @@ const CoursesePage = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

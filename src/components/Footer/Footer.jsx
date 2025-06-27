@@ -1,9 +1,14 @@
 import './Footer.css';
-
 const Footer = () => {
-    return(
+    return (
         <div>
-            
+            <footer className='footer'>
+                <p> "@"
+                    "2025"
+                    "Vivekanand College,Kolhapur. All rights reserved."
+                </p>
+            </footer>
+
         </div>
     )
 }

@@ -1,28 +1,28 @@
-body, .App {
-  font-family: Arial, sans-serif;
-  color: #333;
-  
-}
-
 .main-layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: #f4f7f6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F7F6;
 }
 
 .content {
-    background-color: #52d2d2;
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px;
+  background-color: #52d2d2;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
 .page-container {
-   /* max-width: 960px;*/
+    /*max-width: 960px;*/
     height: 500px;
     margin: 20px auto;
     padding: 20px;
@@ -30,6 +30,14 @@ body, .App {
     border-radius: 8px;
     box-shadow: 0 4px 12px #0000000d;
 }
+
+.page-container h1 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
 
 .hero-section {
     position: relative;
@@ -57,7 +65,6 @@ body, .App {
     color: #fff;
     text-align: center;
     width: 90%;
-    z-index: 2;
 }
 
 .hero-overlay-text h1 {
@@ -65,6 +72,14 @@ body, .App {
     font-size: 3.5em;
     margin-bottom: 15px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+.page-container h2 {
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
 
 .hero-overlay-text p {
@@ -87,35 +102,7 @@ body, .App {
     color: #eee;
 }
 
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
-
-.page-container h2 {
-    color: #000000;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 1.8em;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
-h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
-ul {
+.page-container ul {
     display: block;
     list-style-type: disc;
     margin-block-start: 1em;
@@ -123,6 +110,11 @@ ul {
     padding-inline-start: 40px;
     unicode-bidi: isolate;
 }
+
+.page-container li {
+    margin-bottom: 8px;
+}
+
 .image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -139,10 +131,6 @@ ul {
     box-shadow: 0 2px 8px #0000001a;
     transition: transform 0.3s ease;
 }
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
 
 .image-gallery img:hover {
     transform: scale(1.05);
@@ -152,10 +140,7 @@ img {
     text-align: center;
     margin-top: 40px;
 }
-div {
-    display: block;
-    unicode-bidi: isolate;
-}
+
 .call-to-action .btn {
     display: inline-block;
     background-color: #28a745;
@@ -163,17 +148,12 @@ div {
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: bold;
     transition: background-color .3s ease;
 }
 
 .call-to-action .btn:hover {
-    background-color: #9383db;
-}
-
-fadeInUptoBottom animation {
-    opacity: 1;
-    transform: translateY(0px);
+    background-color: #00ff88;
 }
 
 .page-container h3 {
@@ -187,64 +167,6 @@ fadeInUptoBottom animation {
     animation: fadeInUptoBottom 1s ease-out forwards;
 }
 
-h3 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    font-family: Arial, sans-serif;
-}
-
-.chatbot-open-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    font-size: 2.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px #0003;
-    transition: transform .2s ease-in-out;
-}
-
-.chatbot-window.closed {
-    opacity: 0;
-    pointer-events: none;
-    transform: scale(.8);
-    visibility: hidden;
-}
-
-.chatbot-window {
-    background-color: #fff;
-    border: 1px solid #E0E0E0;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px #00000026;
-    width: 350px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform-origin: bottom right;
-    transition: transform .3s ease-in-out, opacity .3s ease-in-out, visibility .3s ease-in-out;
-}
 
 .video-container {
     margin-top: 30px;
@@ -303,7 +225,7 @@ table {
     border: 1px solid #DEE2E6;
     padding: 12px;
     text-align: left;
-    font-size: .95em;
+    font-size: 0.95em;
 }
 
 th {
@@ -312,4 +234,97 @@ th {
     font-weight: bold;
     text-align: center;
     unicode-bidi: isolate;
+}
+
+.admissions-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}  
+.admissions-table tbody tr:hover {
+    background-color: #e9ecef;
+}   
+
+.page-container ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    list-style: decimal;
+    color: #555;
+}
+.page-container ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUptoBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUptoBottom 1s ease-out forwards;
+}
+
+
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .hero-section {
+    height: 250px;
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 2.2em;
+  }
+
+  .hero-overlay-text p {
+    font-size: 1em;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .image-gallery img {
+    height: 180px;
+  }
+
+  */ .admissions-table thead,
+  .admissions-table tbody,
+  .admissions-table th,
+  .admissions-table td,
+  .admissions-table tr {
+    display: block;
+    width: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .page-container {
+    padding: 10px;
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-overlay-text p {
+    font-size: 0.9em;
+  }
 }

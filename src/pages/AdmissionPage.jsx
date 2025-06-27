@@ -1,4 +1,6 @@
+import Footer from "../components/Footer/Footer";
 import Header from "../components/HEADER/Header";
+
 
 const AdmissionPage = () => {
     return (
@@ -16,6 +18,7 @@ const AdmissionPage = () => {
                     <p>For detailed information on postgraduate program admissions, specific program syllabi, and fee structures, please visit our <a href="/courses" data-discover="true">Courses page</a> or <a href="/contact" data-discover="true">Contact us</a> directly.</p>
                 </div>
             </div>
+            <Footer/>    
         </div>
 
     )
