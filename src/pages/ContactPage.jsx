@@ -1,5 +1,5 @@
 import Footer from "../components/Footer/Footer";
-import Header from "../components/HEADER/Header";
+import Header from "../components/Header/Header";
 
 
 const ContactPage = () => {
