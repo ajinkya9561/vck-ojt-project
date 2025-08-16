@@ -7,7 +7,7 @@ import "./styles/Pages.css";
 import AdmissionPage from "./pages/AdmissionPage";
 import ChatbotComponent from "./components/Chatbot/ChatbotComponent";
 import { useState } from "react";
-import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperinfoPopup";
+import DeveloperInfoPopup from "./components/DeveloperInfo/DeveloperInfoPopup";
 
 
 const App = () => {
